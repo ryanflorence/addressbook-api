@@ -38,6 +38,12 @@ app.get('/contacts/:contactId', contact.read)
 app.put('/contacts/:contactId', contact.update)
 app.del('/contacts/:contactId', contact.destroy)
 
+app.get('/contacts.json', contact.list)
+app.post('/contacts.json', contact.create)
+app.get('/contacts/:contactId.json', contact.read)
+app.put('/contacts/:contactId.json', contact.update)
+app.del('/contacts/:contactId.json', contact.destroy)
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'))
 })
