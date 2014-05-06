@@ -43,20 +43,6 @@ module.exports = function(ip) {
     avatar: 'http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7.jpg'
   });
 
-  exports.create({
-    id: '123456',
-    first: 'Stanley',
-    last: 'Stuart',
-    avatar: 'https://si0.twimg.com/profile_images/3579590697/63fd9d3854d38fee706540ed6611eba7.jpeg'
-  });
-
-  exports.create({
-    id: '1a2b3c',
-    first: 'Eric',
-    last: 'Berry',
-    avatar: 'https://si0.twimg.com/profile_images/3254281604/08df82139b53dfa4a3a5adfa7e99426e.jpeg'
-  });
-
   return exports;
 };
 
