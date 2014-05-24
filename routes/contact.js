@@ -18,9 +18,12 @@ exports.list = function(req, res){
 
 exports.read = function(req, res) {
   var contacts = contact(ip(req));
-  res.json({
-    contact: contacts.read(req.params.contactId)
-  });
+  var record = contacts.read(req.params.contactId);
+  if (!record) {
+    res.send(404);
+  } else {
+    res.json({ contact: record });
+  }
 };
 
 exports.update = function(req, res) {
