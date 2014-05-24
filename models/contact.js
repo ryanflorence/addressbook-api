@@ -33,7 +33,9 @@ module.exports = function(ip) {
   };
 
   exports.destroy = function(id) {
-    return erase(all, map[id]);
+    erase(all, map[id]);
+    delete map[id]
+    return;
   };
 
   exports.create({
@@ -41,6 +43,13 @@ module.exports = function(ip) {
     first: 'Ryan',
     last: 'Florence',
     avatar: 'http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7.jpg'
+  });
+
+  exports.create({
+    id: 'hijklmnop',
+    first: 'Jason',
+    last: 'Madsen',
+    avatar: 'https://pbs.twimg.com/profile_images/3061748182/7b444577d27f38fdb04dac4d371894fc.jpeg'
   });
 
   return exports;
