@@ -34,22 +34,64 @@ module.exports = function(ip) {
 
   exports.destroy = function(id) {
     erase(all, map[id]);
-    delete map[id]
+    delete map[id];
     return;
   };
 
   exports.create({
-    id: 'abcdefg',
+    id: 'ryan',
     first: 'Ryan',
     last: 'Florence',
-    avatar: 'http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7.jpg'
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/ryan.jpg'
   });
 
   exports.create({
-    id: 'hijklmnop',
-    first: 'Jason',
-    last: 'Madsen',
-    avatar: 'https://pbs.twimg.com/profile_images/3061748182/7b444577d27f38fdb04dac4d371894fc.jpeg'
+    id: 'jeremy',
+    first: 'Jeremy',
+    last: 'Ashkenas',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/jeremy.jpg'
+  });
+
+  exports.create({
+    id: 'yehuda',
+    first: 'Yehuda',
+    last: 'Katz',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/yehuda.jpg'
+  });
+
+  exports.create({
+    id: 'tom',
+    first: 'Tom',
+    last: 'Dale',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/tom.jpg'
+  });
+
+  exports.create({
+    id: 'pete',
+    first: 'Pete',
+    last: 'Hunt',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/pete.jpg'
+  });
+
+  exports.create({
+    id: 'misko',
+    first: 'Misko',
+    last: 'Hevery',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/misko.png'
+  });
+
+  exports.create({
+    id: 'scott',
+    first: 'Scott',
+    last: 'Miles',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/scott.png'
+  });
+
+  exports.create({
+    id: 'matt',
+    first: 'Matt',
+    last: 'Zabriskie',
+    avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/matt.jpeg'
   });
 
   return exports;
