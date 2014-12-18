@@ -8,6 +8,8 @@ Just a silly little api to mimick an address book.
 - Data stored by whatever you put in the `Authorization` header, keep
   your ascii art to yourself
 - Data is just in memory, so data resets with the app
+- 25% of responses to `GET /contacts/:id` are forced to take at least 1
+  second
 
 Requests without an `Authorization` header will read and write to a
 public list of contacts. So, if you want your own list, send any string
