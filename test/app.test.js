@@ -5,13 +5,8 @@ var app = require(cwd + '/app');
 describe('contact', function() {
 
   describe('list', function() {
-    it('sends a list of contacts', function(done) {
-      get('/contacts').expect({contacts: [{
-        id: 'abcdefg',
-        first: 'Ryan',
-        last: 'Florence',
-        avatar: 'http://www.gravatar.com/avatar/749001c9fe6927c4b069a45c2a3d68f7.jpg'
-      }]}, done);
+    it.only('sends a list of contacts', function(done) {
+      get('/contacts').expect({contacts: [{"id":"ryan","first":"Ryan","last":"Florence","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/ryan.jpg"},{"id":"jeremy","first":"Jeremy","last":"Ashkenas","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/jeremy.jpg"},{"id":"yehuda","first":"Yehuda","last":"Katz","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/yehuda.jpg"},{"id":"tom","first":"Tom","last":"Dale","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/tom.jpg"},{"id":"pete","first":"Pete","last":"Hunt","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/pete.jpg"},{"id":"misko","first":"Misko","last":"Hevery","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/misko.png"},{"id":"scott","first":"Scott","last":"Miles","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/scott.png"},{"id":"matt","first":"Matt","last":"Zabriskie","avatar":"http://ryanflorence.com/jsconf-avatars/avatars/matt.jpeg"}]}, done);
     });
   });
 
@@ -66,7 +61,9 @@ describe('contact', function() {
 /******************************************************************************/
 
 function createRequest(url, method, data) {
-  var req = request(app)[method](url).set('Accept', 'application/json');
+  var req = request(app)[method](url).
+    set('Accept', 'application/json').
+    set('Authorization', 'test-token');
   if (data) req.send(data);
   req.expect('Content-Type', /json/);
   return req;

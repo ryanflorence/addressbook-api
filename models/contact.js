@@ -1,12 +1,12 @@
-var ips = {};
+var tokens = {};
 
-module.exports = function(ip) {
-  if (ips[ip])
-    return ips[ip];
+module.exports = function(token) {
+  if (tokens[token])
+    return tokens[token];
 
   var all = [];
   var map = {};
-  var exports = ips[ip] = {};
+  var exports = tokens[token] = {};
 
   exports.list = function() {
     return all;

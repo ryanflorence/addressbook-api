@@ -5,8 +5,22 @@ Just a silly little api to mimick an address book.
 
 - CORS-ready
 - Post whatever data you want, all it manages are the IDs
-- Data stored by remote ip address, keep your ascii art to yourself
+- Data stored by whatever you put in the `Authorization` header, keep
+  your ascii art to yourself
 - Data is just in memory, so data resets with the app
+
+Requests without an `Authorization` header will read and write to a
+public list of contacts. So, if you want your own list, send any string
+you want in the header, for example:
+
+```js
+ajax({
+  url: 'http://addressbook-api.herokuapp.com',
+  headers: {
+    'Authorization': 'ae34g1ce'
+  }
+});
+```
 
 ## GET /contacts
 
@@ -15,7 +29,7 @@ Returns all contacts, there are a few by default
 Example request:
 
 ```js
-$.getJSON('http://salty-atoll-4248.herokuapp.com/contacts')
+$.getJSON('http://addressbook-api.herokuapp.com/contacts')
 ```
 
 Example response:
