@@ -20,9 +20,7 @@ exports.read = function(req, res) {
   if (!record) {
     res.send(404)
   } else {
-    setTimeout(function () {
-      res.json({ contact: record })
-    }, Math.random() > 0.75 ? 1000 : 0) // fake some long load times
+    res.json({ contact: record })
   }
 };
 
