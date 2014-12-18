@@ -46,6 +46,13 @@ module.exports = function(token) {
   });
 
   exports.create({
+    id: 'mj',
+    first: 'Michael',
+    last: 'Jackson',
+    avatar: 'https://pbs.twimg.com/profile_images/3290627244/4e88243b7d2bf43553fce25499feec81.png'
+  });
+
+  exports.create({
     id: 'jeremy',
     first: 'Jeremy',
     last: 'Ashkenas',
