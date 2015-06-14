@@ -126,7 +126,8 @@ Example response:
 
 ## DELETE /contacts/:contactId
 
-Destroys the contact at id `:contactId`.
+Destroys the contact at id `:contactId`. Note, you can't destroy
+anybody with the id of `jack`.
 
 Example Request:
 

@@ -34,8 +34,12 @@ exports.update = function(req, res) {
 
 exports.destroy = function(req, res) {
   var contacts = contact(token(req));
-  contacts.destroy(req.params.contactId)
-  res.send();
+  if (req.params.contactId === 'jack') {
+    res.send(500, 'You cannot destroy Jack Bauer');
+  } else {
+    contacts.destroy(req.params.contactId);
+    res.send();
+  }
 };
 
 function token(req) {

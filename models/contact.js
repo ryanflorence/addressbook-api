@@ -39,11 +39,18 @@ module.exports = function(token) {
   };
 
   exports.create({
+    id: 'jack',
+    first: 'Jack',
+    last: 'Bauer'
+  });
+
+  exports.create({
     id: 'ryan',
     first: 'Ryan',
     last: 'Florence',
     avatar: 'http://ryanflorence.com/jsconf-avatars/avatars/ryan.jpg'
   });
+
 
   exports.create({
     id: 'mj',
