@@ -1,32 +1,32 @@
 var contact = require('../models/contact');
 
 exports.create = function(req, res) {
-  var contacts = contact(token(req))
+  var contacts = contact(token(req));
   res.json({
     contact: contacts.create(req.body.contact)
   }, 201);
 };
 
 exports.list = function(req, res){
-  var contacts = contact(token(req))
+  var contacts = contact(token(req));
   res.json({
     contacts: contacts.list()
   });
 };
 
 exports.read = function(req, res) {
-  var contacts = contact(token(req))
-  var record = contacts.read(req.params.contactId)
+  var contacts = contact(token(req));
+  var record = contacts.read(req.params.contactId);
   if (!record) {
-    res.send(404)
+    res.send(404);
   } else {
-    res.json({ contact: record })
+    res.json({ contact: record });
   }
 };
 
 exports.update = function(req, res) {
   var contacts = contact(token(req));
-  var record = contacts.update(req.params.contactId, req.body.contact)
+  var record = contacts.update(req.params.contactId, req.body.contact);
   res.json({
     contact: record
   });
