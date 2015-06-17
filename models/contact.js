@@ -41,7 +41,8 @@ module.exports = function(token) {
   exports.create({
     id: 'jack',
     first: 'Jack',
-    last: 'Bauer'
+    last: 'Bauer',
+    avatar: 'http://oyster.ignimgs.com/wordpress/stg.ign.com/2014/04/6-01-JackChange.jpg'
   });
 
   exports.create({
