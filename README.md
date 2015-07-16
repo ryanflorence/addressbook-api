@@ -103,7 +103,7 @@ Example Request:
 
 ```js
 $.ajax({
-  url: 'http://salty-atoll-4248.herokuapp.com/contacts/3',
+  url: 'http://salty-atoll-4248.herokuapp.com/contacts/2',
   type: 'PUT',
   data: {
     first: 'five',
